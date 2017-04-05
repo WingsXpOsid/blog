@@ -1,0 +1,115 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: 资讯分享站
+subtitle: 欢迎来到动漫资讯
+description: 这是一个新的起点！
+author: Double World
+language: zh-CN
+timezone: Asia/Shanghai
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: https://fitzgerald.coding.me/
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :year-:month-:day-:title.md
+default_layout: acg
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace:
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 0
+pagination_dir: page
+archive_generator:
+  per_page: 0
+tag_generator:
+  per_page: 0
+category_generator:
+  per_page: 0
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: indigo
+
+baidu_url_submit:
+  count: 1 ## 提交最新的一个链接
+  host: www.hui-wang.info ## 在百度站长平台中注册的域名
+  token: your_token ## 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!
+  path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
+admin:
+    name: DoubleWorld
+    password: liweibing123
+    secret: hey hexo
+    expire: 60*1
+    cors: https://fitzgerald.coding.me
+feed:
+  type: atom
+  path: atom.xml
+  limit: 0
+  
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: true
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: true
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: true
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+ 
+deploy:
+  type: git
+  repo: git@git.coding.net:Fitzgerald/fitzgerald.coding.me.git
+  branch: master  
